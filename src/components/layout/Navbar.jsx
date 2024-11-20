@@ -6,6 +6,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import ResponsiveMenu from "../features/ResponsiveMenu";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -99,9 +100,9 @@ const Navbar = () => {
                     </div>
                     {/* Icons section */}
                     <div className="lg:flex lg:items-center lg:gap-4 hidden">
-                        <a href="/products" className="text-2xl font-bold text-secondary hover:bg-secondary hover:text-white rounded-full p-2 duration-200">
+                        <Link href="/products" className="text-2xl font-bold text-secondary hover:bg-secondary hover:text-white rounded-full p-2 duration-200">
                             <MdOutlineSearch />
-                        </a>
+                        </Link>
                         <button className="text-2xl text-secondary hover:bg-secondary hover:text-white rounded-full p-2 duration-200">
                             <MdOutlineShoppingCart/>
                         </button>
@@ -110,12 +111,12 @@ const Navbar = () => {
                         </button>
                         <div className="lg:flex lg:justify-center lg:gap-2 text-secondary rounded-md border-2 border-secondary px-6 py-2 duration-200 hidden hover:bg-secondary hover:text-white ">
                             <FaUser className="mt-[2.25px]" />
-                            <a
+                            <Link
                                 className="font-semibold border-none"
                                 href="/authpage"
                             >
                                 Login / Register
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* Mobile Hamburger Menu Section */}

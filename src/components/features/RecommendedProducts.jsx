@@ -5,6 +5,7 @@ import { displayHero } from "@/utils/mockData/data";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { MdFavoriteBorder, MdOutlineShoppingCart } from "react-icons/md";
 import StarRating from "./StarRating";
+import Link from "next/link";
 
 const RecommendedProducts = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -60,9 +61,9 @@ const RecommendedProducts = () => {
             {/* Product Info */}
             <div className="text-left mb-12 md:mt-4">
                 <h1 className="text-xl font-bold md:mb-10">RECOMMENDED PRODUCT</h1>
-                <a href={`/products/${displayHero[selectedIndex]?.id}`} >
+                <Link href={`/products/${displayHero[selectedIndex]?.id}`} >
                     <h2 className="text-2xl font-bold text-gray-800 pb-2">{displayHero[selectedIndex]?.name} </h2>
-                </a>
+                </Link>
                 <div className="mb-2 flex items-center gap-2">
                     <StarRating rating={displayHero[selectedIndex]?.rating} />
                     <span className="text-justify font-semibold text-grey text-sm mb-[0.25px]">{displayHero[selectedIndex]?.totalReviews} Reviews</span>

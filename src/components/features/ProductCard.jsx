@@ -1,5 +1,6 @@
 import Image from "next/image";
 import StarRating from "./StarRating";
+import Link from "next/link";
 
 const ProductCard = ({ productId, productName, productDesc, productPrice, productImage, productRating }) => {
     return (
@@ -16,9 +17,9 @@ const ProductCard = ({ productId, productName, productDesc, productPrice, produc
             {/* Informasi */}
             <div className="flex flex-col justify-between flex-grow">
                 <div className="px-4 pt-2 flex flex-col justify-start flex-grow">
-                    <a href={`/products/${productId}`}>
+                    <Link href={`/products/${productId}`}>
                         <h2 className="text-lg mb-1 font-bold">{productName}</h2>
-                    </a>
+                    </Link>
                 </div>
                 <div className="px-4 pb-2 flex flex-col justify-end flex-grow">
                     <p className="text-sm mb-2">{productDesc}</p>

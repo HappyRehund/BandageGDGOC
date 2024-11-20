@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { MdOutlineSearch, MdFavoriteBorder, MdOutlineShoppingCart } from "react-icons/md";
 import { FaUser } from "react-icons/fa6";
+import Link from "next/link";
 
 
 const ResponsiveMenu = ({ open }) => {
@@ -49,36 +50,36 @@ const ResponsiveMenu = ({ open }) => {
                                             >
                                                 {shopSubmenu.map((subItem) => (
                                                     <li key={subItem.id}>
-                                                        <a
+                                                        <Link
                                                             href={subItem.link}
                                                             className="block px-4 pt-8 text-lg text-black hover:text-secondary"
                                                         >
                                                             {subItem.title}
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                     ) : (
-                                        <a
+                                        <Link
                                             href={item.link}
                                             className="inline-block pb-1 px-3 hover:text-secondary font-semibold"
                                         >
                                             {item.title}
-                                        </a>
+                                        </Link>
                                     )}
 
                                 </li>
                             ))}
                         </ul>
                         <div className="flex flex-col justify-center items-start gap-6 mt-8 ml-1">
-                            <a
+                            <Link
                                 className="flex items-center gap-2 text-xl font-bold text-secondary hover:bg-secondary hover:text-white rounded-full p-2 duration-200"
                                 href="/products"
                             >
                                 <p>Search</p>
                                 <MdOutlineSearch className="" />
-                            </a>
+                            </Link>
                             <button className="flex items-center gap-2 text-xl text-secondary hover:bg-secondary hover:text-white rounded-full p-2 duration-200">
                                 <p>CheckOut</p>
                                 <MdOutlineShoppingCart className="" />
@@ -89,11 +90,11 @@ const ResponsiveMenu = ({ open }) => {
                             </button>
                             <div className="text-xl flex justify-center gap-2 text-secondary rounded-md border-2 border-secondary px-6 py-2 duration-200 hover:bg-secondary hover:text-white ">
                                 <FaUser className="mt-[2.25px]" />
-                                <a
+                                <Link
                                     className="font-semibold border-none"
                                     href="/authpage"
                                 >Login / Register
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

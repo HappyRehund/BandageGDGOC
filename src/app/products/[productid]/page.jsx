@@ -15,14 +15,14 @@ const ProductDetail = ({ params }) => {
 
     return (
         <div className="container mx-auto p-4 mt-8">
-            <a href="/products">
+            <Link href="/products">
                 <button
                     className="relative -top-6  left-6 flex items-center text-primary font-semibold hover:text-[#195D4C] transition-colors z-10"
                 >
                     <FaArrowLeft className="mr-2" />
                     Back
                 </button>
-            </a>
+            </Link>
             {/* Carousel + desc */}
             <CarouselandDesc product={product} />
             {/* Display Product lain */}

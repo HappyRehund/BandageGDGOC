@@ -2,6 +2,7 @@
 import { FaGooglePlusG, FaFacebookF, FaGithub, FaLinkedinIn, FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const LoginRegister = () => {
     const [isRegister, setIsRegister] = useState(false);
@@ -36,18 +37,18 @@ const LoginRegister = () => {
                         <form className="flex flex-col items-center">
                             <h1 className="text-2xl font-semibold mb-5">Create Account</h1>
                             <div className="flex space-x-3 mb-5">
-                                <a href="#" className="p-3 border border-gray-300 rounded-full">
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full">
                                     <FaGooglePlusG />
-                                </a>
-                                <a href="#" className="p-3 border border-gray-300 rounded-full">
+                                </Link>
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full">
                                     <FaFacebookF />
-                                </a>
-                                <a href="#" className="p-3 border border-gray-300 rounded-full">
+                                </Link>
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full">
                                     <FaGithub />
-                                </a>
-                                <a href="#" className="p-3 border border-gray-300 rounded-full">
+                                </Link>
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full">
                                     <FaLinkedinIn />
-                                </a>
+                                </Link>
                             </div>
                             <span className="text-sm text-gray-600 mb-3">
                                 or use your email for registration
@@ -78,18 +79,18 @@ const LoginRegister = () => {
                         <form className="flex flex-col items-center">
                             <h1 className="text-2xl font-semibold mb-5">Sign In</h1>
                             <div className="flex space-x-3 mb-5">
-                                <a href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150">
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150">
                                     <FaGooglePlusG />
-                                </a>
-                                <a href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150 ">
+                                </Link>
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150 ">
                                     <FaFacebookF />
-                                </a>
-                                <a href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150">
+                                </Link>
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150">
                                     <FaGithub />
-                                </a>
-                                <a href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150">
+                                </Link>
+                                <Link href="#" className="p-3 border border-gray-300 rounded-full hover:bg-primary hover:text-white duration-150">
                                     <FaLinkedinIn />
-                                </a>
+                                </Link>
                             </div>
                             <span className="text-sm text-gray-600 mb-3">
                                 or use your email and password
@@ -104,9 +105,9 @@ const LoginRegister = () => {
                                 placeholder="Password"
                                 className="w-full mb-3 p-3 border rounded-md outline-none focus:ring-2 focus:ring-[#2EAD8D]"
                             />
-                            <a href="#" className="text-sm text-primary hover:underline mb-5">
+                            <Link href="#" className="text-sm text-primary hover:underline mb-5">
                                 Forget Your Password?
-                            </a>
+                            </Link>
                             <button className="px-6 py-3 bg-primary text-white rounded-md font-semibold hover:bg-[#195D4C]">
                                 Sign In
                             </button>
