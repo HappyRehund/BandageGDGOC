@@ -6,7 +6,6 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { MdFavoriteBorder, MdOutlineShoppingCart } from "react-icons/md";
 import StarRating from "./StarRating";
 import Link from "next/link";
-import Image from "next/image";
 
 const RecommendedProducts = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });

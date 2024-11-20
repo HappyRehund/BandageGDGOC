@@ -5,9 +5,11 @@ import Navbar from "@/components/layout/Navbar";
 export default function ProductsLayout({ children }) {
     return (
         <>
-            <Header />
-            <Navbar />
-            {children}
+            <Suspense fallback={<div>Loading...</div>}>
+                <Header />
+                <Navbar />
+                {children}
+            </Suspense>
         </>
     )
 }

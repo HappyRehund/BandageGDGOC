@@ -4,7 +4,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { MdFavoriteBorder, MdOutlineShoppingCart } from "react-icons/md";
 import StarRating from "./StarRating";
-import Image from "next/image";
 
 const CarouselandDesc = ({ product }) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
