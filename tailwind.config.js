@@ -7,9 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#23856D",
+        secondary: "#23A6F0"
+      },
+
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem'
+        }
       },
     },
   },
