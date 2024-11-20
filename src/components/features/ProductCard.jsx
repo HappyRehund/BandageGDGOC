@@ -3,19 +3,19 @@ import Image from "next/image";
 import StarRating from "./StarRating";
 import Link from "next/link";
 import { useState } from "react";
-import Skeleton from "react-loading-skeleton"; // Opsional, gunakan ini untuk placeholder
+import Skeleton from "react-loading-skeleton";
 
 const ProductCard = ({ productId, productName, productDesc, productPrice, productImage, productRating }) => {
-    const [isImageLoading, setIsImageLoading] = useState(true); // State untuk loading gambar
+    const [isImageLoading, setIsImageLoading] = useState(true); 
 
-    const handleImageLoad = () => setIsImageLoading(false); // Update ketika gambar selesai dimuat
+    const handleImageLoad = () => setIsImageLoading(false); 
 
     return (
         <div className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
             {/* Gambar */}
             <div className="relative h-64 w-full">
                 {isImageLoading && (
-                    <Skeleton className="h-full w-full rounded-lg" /> // Skeleton saat loading
+                    <Skeleton className="h-full w-full rounded-lg" />
                 )}
                 <Image
                     src={productImage}
@@ -24,7 +24,7 @@ const ProductCard = ({ productId, productName, productDesc, productPrice, produc
                     className={`object-cover transition-opacity duration-300 ${
                         isImageLoading ? "opacity-0" : "opacity-100"
                     }`}
-                    onLoadingComplete={handleImageLoad} // Callback saat gambar selesai dimuat
+                    onLoad={handleImageLoad} 
                 />
             </div>
             {/* Informasi */}
@@ -40,13 +40,13 @@ const ProductCard = ({ productId, productName, productDesc, productPrice, produc
                     <p className="text-sm mb-2">
                         {isImageLoading ? <Skeleton width="80%" /> : productDesc}
                     </p>
-                    <div className="mb-2 flex items-center gap-2">
+                    <div className="mb-2 flex-col md:flex items-center md:gap-2">
                         {isImageLoading ? (
                             <Skeleton width="40%" />
                         ) : (
                             <>
                                 <StarRating className="text-sm" rating={productRating} />
-                                <p className="text-justify font-semibold text-sm mb-[0.25px]">
+                                <p className="mx-[0.15rem] mt-1 text-justify font-semibold text-sm mb-[0.25px]">
                                     {productRating} / 5
                                 </p>
                             </>

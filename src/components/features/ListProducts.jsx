@@ -3,19 +3,16 @@ import { useState } from "react";
 import { Products } from "@/utils/mockData/data";
 import ProductCard from "./ProductCard";
 
-const ITEMS_PER_PAGE = 4; // Jumlah item per halaman
+const ITEMS_PER_PAGE = 4;
 
 const ListProducts = () => {
-    const [currentPage, setCurrentPage] = useState(1); // State untuk halaman saat ini
+    const [currentPage, setCurrentPage] = useState(1);
 
-    // Hitung jumlah total halaman
     const totalPages = Math.ceil(Products.length / ITEMS_PER_PAGE);
 
-    // Tentukan indeks produk untuk halaman saat ini
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const currentProducts = Products.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-    // Fungsi untuk berpindah halaman
     const goToPage = (pageNumber) => {
         setCurrentPage(pageNumber);
     };

@@ -6,19 +6,19 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { MdFavoriteBorder, MdOutlineShoppingCart } from "react-icons/md";
 import StarRating from "./StarRating";
 import Link from "next/link";
-import Skeleton from "react-loading-skeleton"; // Skeleton placeholder
+import Skeleton from "react-loading-skeleton";
 
 const RecommendedProducts = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
     const [selectedIndex, setSelectedIndex] = useState(0);
-    const [isLoading, setIsLoading] = useState(true); // State untuk loading data
+    const [isLoading, setIsLoading] = useState(true);
 
     const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
     const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
     useEffect(() => {
         // Simulasi loading (bisa diganti dengan fetch API)
-        const timeout = setTimeout(() => setIsLoading(false), 1500); // Simulasi delay 1.5 detik
+        const timeout = setTimeout(() => setIsLoading(false), 1500); 
         return () => clearTimeout(timeout);
     }, []);
 
@@ -123,7 +123,7 @@ const RecommendedProducts = () => {
                 <p className="text-gray-600 pb-4">
                     {isLoading ? <Skeleton width="80%" count={2} /> : displayHero[selectedIndex]?.desc}
                 </p>
-                <hr />
+                <hr className="mt-2 pb-4" />
                 <div className="flex justify-start gap-4 items-center mb-4">
                     {isLoading ? (
                         Array(4)

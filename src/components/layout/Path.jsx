@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const Path = () => {
-    const pathname = usePathname(); // Mengambil path saat ini
+    const pathname = usePathname();
 
     const getRouteInfo = () => {
         switch (pathname) {
