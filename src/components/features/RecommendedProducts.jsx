@@ -6,6 +6,7 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { MdFavoriteBorder, MdOutlineShoppingCart } from "react-icons/md";
 import StarRating from "./StarRating";
 import Link from "next/link";
+import Image from "next/image";
 
 const RecommendedProducts = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -36,7 +37,7 @@ const RecommendedProducts = () => {
                             className="flex-[0_0_100%] relative aspect-[11/10]"
                             key={info.id}
                         >
-                            <img
+                            <Image
                                 src={info.image}
                                 alt={info.name}
                                 className="w-full h-full object-cover max-w-[80%] max-h-[80%] mx-auto rounded-lg shadow-md"

@@ -3,6 +3,7 @@ import CarouselandDesc from "@/components/features/CarouselandDesc";
 import { Products } from "@/utils/mockData/data";
 import BestSellerProducts from "@/components/layout/BestsellerProducts";
 import { FaArrowLeft } from "react-icons/fa6";
+import Link from "next/link";
 
 
 const ProductDetail = ({ params }) => {
