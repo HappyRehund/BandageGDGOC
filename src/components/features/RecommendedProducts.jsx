@@ -37,7 +37,7 @@ const RecommendedProducts = () => {
                             className="flex-[0_0_100%] relative aspect-[11/10]"
                             key={info.id}
                         >
-                            <Image
+                            <img
                                 src={info.image}
                                 alt={info.name}
                                 className="w-full h-full object-cover max-w-[80%] max-h-[80%] mx-auto rounded-lg shadow-md"

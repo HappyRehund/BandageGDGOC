@@ -36,7 +36,7 @@ const CarouselandDesc = ({ product }) => {
                             className="flex-[0_0_100%] relative aspect-[3/2]"
                             key={index}
                         >
-                            <Image
+                            <img
                                 src={image}
                                 alt={`image ${index}`}
                                 className="w-full h-full object-cover max-w-[80%] max-h-[80%] mx-auto rounded-lg shadow-md"
